@@ -14,8 +14,15 @@ faccio la sottrazione
 inserisco il costo con lo sconto
  */
     //Km
-const kmNumber = parseInt (prompt('Inserisci qui il numero dei chilometri che farai'));
+const kmNumber = parseInt ( prompt ('Inserisci qui il numero dei chilometri che farai','20'));
 const kmPrice = 0.21;
 let ticketPrice = kmNumber * kmPrice;
     //Age
-const passengerAge = parseInt(prompt('Inserisci qui il l\'età'));
+const passengerAge = parseInt ( prompt ('Inserisci qui il l\'età','20'));
+if (passengerAge<18 && passengerAge>65){
+
+} else {
+  console.log (ticketPrice)}
+
+let message = `Il costo del biglietto e di <b> ${ticketPrice} &euro </b>`;
+console.log(message);

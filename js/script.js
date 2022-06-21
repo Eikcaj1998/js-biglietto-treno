@@ -15,14 +15,14 @@ inserisco il costo con lo sconto
  */
     //Km
 const kmNumber = parseInt ( prompt ('Inserisci qui il numero dei chilometri che farai','20'));
-console.log(kmNumber)
+console.log(kmNumber  + 'Km')
 const kmPrice = 0.21;
-console.log(kmPrice)
+console.log(kmPrice + '\u20AC')
 let ticketPrice = kmNumber * kmPrice;
 console.log(ticketPrice)
     //Age
 const passengerAge = parseInt ( prompt ('Inserisci qui il l\'età','25'));
-console.log(passengerAge)
+console.log(passengerAge +' anni')
 let message = `Il costo del biglietto e di `;
 let ticketAge =  `sconto di `;
 if (passengerAge < 18 || passengerAge > 65){
@@ -30,22 +30,22 @@ if (passengerAge < 18 || passengerAge > 65){
     if(passengerAge < 18){
         //sconto 20%
         let discount = ((ticketPrice * 20) / 100);
-        console.log(ticketAge + discount)
+        console.log(ticketAge + discount + '\u20AC')
         //totale - sconto
         let discountedTicketPrice = ticketPrice - discount;
         let discountedPrice = discountedTicketPrice.toFixed(2);
-        console.log(discountedPrice) 
+        console.log(discountedPrice + '\u20AC') 
                 // prezzo finale
         message = message + discountedPrice
          //minore di 65 anni
     } else if (passengerAge > 65) {
          //sconto 40%
     let discount = ((ticketPrice * 40) / 100);
-    console.log(ticketAge + discount)
+    console.log(ticketAge + discount + '\u20AC')
         //totale - sconto
     let discountedTicketPrice = ticketPrice - discount;
     let discountedPrice = discountedTicketPrice.toFixed(2);
-    console.log(discountedPrice)
+    console.log(discountedPrice + '\u20AC')
     // prezzo finale
     message = message + discountedPrice
         }   

@@ -13,5 +13,9 @@ inserisco il valore dello sconto
 faccio la sottrazione
 inserisco il costo con lo sconto
  */
-
-
+    //Km
+const kmNumber = parseInt (prompt('Inserisci qui il numero dei chilometri che farai'));
+const kmPrice = 0.21;
+let ticketPrice = kmNumber * kmPrice;
+    //Age
+const passengerAge = parseInt(prompt('Inserisci qui il l\'età'));

@@ -19,40 +19,38 @@ console.log(kmNumber  + 'Km')
 const kmPrice = 0.21;
 console.log(kmPrice + '\u20AC')
 let ticketPrice = kmNumber * kmPrice;
-console.log(ticketPrice)
+console.log('costo ' + ticketPrice + '\u20AC' )
     //Age
 const passengerAge = parseInt ( prompt ('Inserisci qui il l\'età','25'));
-console.log(passengerAge +' anni')
+console.log('Età ' + passengerAge +' anni')
+//testo
 let message = `Il costo del biglietto e di `;
 let ticketAge =  `sconto di `;
-if (passengerAge < 18 || passengerAge > 65){
-     //minore di 18 anni
-    if(passengerAge < 18){
-        //sconto 20%
-        let discount = ((ticketPrice * 20) / 100);
-        console.log(ticketAge + discount + '\u20AC')
-        //totale - sconto
-        let discountedTicketPrice = ticketPrice - discount;
-        let discountedPrice = discountedTicketPrice.toFixed(2);
-        console.log(discountedPrice + '\u20AC') 
-                // prezzo finale
-        message = message + discountedPrice
-         //minore di 65 anni
-    } else if (passengerAge > 65) {
-         //sconto 40%
-    let discount = ((ticketPrice * 40) / 100);
-    console.log(ticketAge + discount + '\u20AC')
-        //totale - sconto
-    let discountedTicketPrice = ticketPrice - discount;
-    let discountedPrice = discountedTicketPrice.toFixed(2);
-    console.log(discountedPrice + '\u20AC')
-    // prezzo finale
-    message = message + discountedPrice
-        }   
-        //maggiore di 18 anni ma minore di 65 anni
-}else {
-    let basePrice = ticketPrice.toFixed(2);
-    console.log(basePrice);
-    message = message + basePrice
+if(passengerAge <= 18){
+ //sconto 20%
+ let discount = ((ticketPrice * 20) / 100);
+ console.log(ticketAge + discount + '\u20AC')
+ //totale - sconto
+ let discountedTicketPrice = ticketPrice - discount;
+ let discountedPrice = discountedTicketPrice.toFixed(2);
+ console.log(discountedPrice + '\u20AC') 
+         // prezzo finale
+ message = message + discountedPrice
+  //minore di 65 anni
+}else if (passengerAge >= 65) {
+    //sconto 40%
+let discount = ((ticketPrice * 40) / 100);
+console.log(ticketAge + discount + '\u20AC')
+   //totale - sconto
+let discountedTicketPrice = ticketPrice - discount;
+let discountedPrice = discountedTicketPrice.toFixed(2);
+console.log(discountedPrice + '\u20AC')
+// prezzo finale
+message = message + discountedPrice
+ //maggiore di 18 anni ma minore di 65 anni
+} else {
+ let basePrice = ticketPrice.toFixed(2);
+console.log(basePrice);
+message = message + basePrice
 }
-console.log(message);
+console.log(message + '\u20AC');
